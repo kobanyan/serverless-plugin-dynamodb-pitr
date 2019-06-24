@@ -1,0 +1,12 @@
+{
+  "name": "serverless-plugin-dynamodb-pitr-example",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "sls package"
+  },
+  "devDependencies": {
+    "serverless": "^1.36.3"
+  }
+}

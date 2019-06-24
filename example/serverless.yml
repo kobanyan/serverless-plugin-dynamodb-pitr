@@ -1,0 +1,42 @@
+service: serverless-plugin-dynamodb-pitr-example
+
+plugins:
+  localPath: '../../'
+  modules:
+    - serverless-plugin-dynamodb-pitr
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+custom:
+  dynamodbPitr:
+    ignore:
+      - ExcludedTable
+
+resources:
+  Resources:
+    IncludedTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        TableName: Example
+    ExcludedTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        TableName: Example
+    WithoutPropertiesTable:
+      Type: AWS::DynamoDB::Table
+    SQSQueue:
+      Type: AWS::SQS::Queue
