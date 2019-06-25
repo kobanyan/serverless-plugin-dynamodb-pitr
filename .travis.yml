@@ -9,3 +9,7 @@ node_js:
 
 install:
   - travis_retry yarn
+
+script:
+  - yarn add --dev coveralls
+  - yarn test --coverage --coverageReporters=text-lcov | coveralls

@@ -1,5 +1,7 @@
 # serverless-plugin-dynamodb-pitr
 
+[![Coverage Status](https://coveralls.io/repos/github/kobanyan/serverless-plugin-dynamodb-pitr/badge.svg?branch=master)](https://coveralls.io/github/kobanyan/serverless-plugin-dynamodb-pitr?branch=master)
+
 A Serverless plugin to easily enable point in time recovery of DynamoDB Table
 
 ## Installation
