@@ -1,0 +1,22 @@
+language: node_js
+
+services:
+  - docker
+
+node_js:
+  - 8
+  - 10
+
+install:
+  - travis_retry yarn
+
+script:
+  - yarn add --dev coveralls
+  - yarn test --coverage --coverageReporters=text-lcov | coveralls
+
+jobs:
+  include:
+    - stage: release
+      node_js: lts/*
+      script:
+        - yarn semantic-release

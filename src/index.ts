@@ -4,7 +4,7 @@ interface Hooks {
   [key: string]: () => Promise<void>;
 }
 
-interface Service {
+export interface Service {
   custom?: {
     dynamodbPitr?: {
       ignore?: string[];
