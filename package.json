@@ -1,6 +1,6 @@
 {
   "name": "serverless-plugin-dynamodb-pitr",
-  "version": "0.0.1",
+  "version": "0.0.0-develop",
   "description": "Serverless DynamoDB PITR plugin",
   "keywords": [
     "serverless",
@@ -33,9 +33,9 @@
     "clean": "rimraf ./lib",
     "compile": "rollup -c",
     "lint": "eslint 'src/**/*.ts' '*.js'",
+    "pretest": "run-p lint build",
     "test": "jest",
-    "prepublishOnly": "run-s lint build",
-    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
+    "prepublishOnly": "run-s build"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
@@ -53,6 +53,7 @@
     "rollup": "^1.16.2",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.21.2",
+    "semantic-release": "^15.13.16",
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.2"
   },

@@ -13,3 +13,10 @@ install:
 script:
   - yarn add --dev coveralls
   - yarn test --coverage --coverageReporters=text-lcov | coveralls
+
+jobs:
+  include:
+    - stage: release
+      node_js: lts/*
+      script:
+        - yarn semantic-release
