@@ -1,6 +1,6 @@
 {
   "name": "serverless-plugin-dynamodb-pitr",
-  "version": "0.0.0-develop",
+  "version": "1.0.0",
   "description": "Serverless DynamoDB PITR plugin",
   "keywords": [
     "serverless",
