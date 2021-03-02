@@ -1,12 +1,10 @@
 {
   "**/*.{ts,tsx}": [
-    "eslint",
     "prettier --parser typescript --write",
-    "git add"
+    "eslint"
   ],
   "**/*.{js,jsx}": [
-    "eslint",
     "prettier --write",
-    "git add"
+    "eslint"
   ]
 }
