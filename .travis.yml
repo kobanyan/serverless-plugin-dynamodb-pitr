@@ -7,6 +7,12 @@ node_js:
   - 10
   - 12
 
+cache:
+- node_modules
+
+before_install:
+- export COVERALLS_SERVICE_JOB_ID=$( TRAVIS_JOB_ID )
+
 install:
   - travis_retry yarn
 
