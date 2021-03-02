@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/kobanyan/serverless-plugin-dynamodb-pitr/issues"
   },
-  "homepage": "https://github.com/kobanyan/serverless-plugin-dynamodb-pitr/tree/master/packages/serverless-plugin-dynamodb-pitr#readme",
+  "homepage": "https://github.com/kobanyan/serverless-plugin-dynamodb-pitr",
   "main": "lib/index.js",
   "module": "lib/index.mjs",
   "types": "lib/index.d.ts",
