@@ -1,5 +1,5 @@
 {
-  "name": "serverless-plugin-dynamodb-pitr-example",
+  "name": "serverless-plugin-dynamodb-pitr-example-v1",
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",

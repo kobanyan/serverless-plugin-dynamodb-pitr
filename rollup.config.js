@@ -8,6 +8,7 @@ export default {
       file: 'lib/index.js',
       format: 'cjs',
       sourcemap: true,
+      exports: 'default',
     },
     {
       file: 'lib/index.mjs',
@@ -18,6 +19,7 @@ export default {
   plugins: [
     typescript({
       typescript: require('typescript'),
+      objectHashIgnoreUnknownHack: true,
     }),
     sourceMaps(),
   ],

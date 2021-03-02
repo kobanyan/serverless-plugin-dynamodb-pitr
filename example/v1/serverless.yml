@@ -1,7 +1,7 @@
-service: serverless-plugin-dynamodb-pitr-example
+service: serverless-plugin-dynamodb-pitr-example-v1
 
 plugins:
-  localPath: '../../'
+  localPath: '../../../'
   modules:
     - serverless-plugin-dynamodb-pitr
 
@@ -25,7 +25,7 @@ resources:
         KeySchema:
           - AttributeName: id
             KeyType: HASH
-        TableName: Example
+        TableName: IncludedTable
     ExcludedTable:
       Type: AWS::DynamoDB::Table
       Properties:
@@ -35,7 +35,7 @@ resources:
         KeySchema:
           - AttributeName: id
             KeyType: HASH
-        TableName: Example
+        TableName: ExcludedTable
     WithoutPropertiesTable:
       Type: AWS::DynamoDB::Table
     SQSQueue:
