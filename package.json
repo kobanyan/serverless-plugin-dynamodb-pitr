@@ -28,6 +28,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "release": {
+    "branches": ["main"]
+  },
   "scripts": {
     "prebuild": "rimraf ./lib",
     "build": "rollup -c",
