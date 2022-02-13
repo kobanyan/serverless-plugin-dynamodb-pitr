@@ -1,0 +1,23 @@
+name: Pr
+on:
+  pull_request
+jobs:
+  pr:
+    name: Pull Request
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Install dependencies
+        run: yarn
+      - name: Lint
+        run: yarn lint
+      - name: Test
+        run: yarn test --coverage
+      - uses: codecov/codecov-action@v2
+        with:
+          directory: ./coverage
